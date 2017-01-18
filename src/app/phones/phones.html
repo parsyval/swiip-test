@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div>
+    <acme-navbar/>
+  </div>
+
+  <div ng-repeat="phone in phones.phoneList" class='list-group' ng-if="phones.phoneList">
+    <div class='list-group-item flex-column justify-content-between d-flex'>
+      <h3>{{phone.name}}</h3>
+      <p class="mb-1">{{phone.description}}</p>
+      <!-- <img class="phone-img float-right" ng-src='{{phone.img}}'/> -->
+      <small class="text-muted">{{phone.price}}</small>
+    </div>
+  </div>
+
+  <div ng-if="phones.error">
+    {{phones.error}}
+  </div>
+
+</div>
